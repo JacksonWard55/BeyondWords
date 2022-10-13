@@ -1,0 +1,7 @@
+{
+  "name": "BeyondWords",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
