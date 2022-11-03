@@ -1,22 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Welcome to Beyond Words
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Image Gallery</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <p>
+      To add an image, drag it to the workspace.
+    </p>
+    <p>
+      Jackson Ward is AMONG US and he is a real SUSSY BAKA
+    </p>
+    <ion-menu-toggle>
+      <ion-button color="danger">Click to close the Gallery</ion-button>
+    </ion-menu-toggle>
+  </ion-content>
+</ion-menu>
 
-<ion-fab vertical="center" horizontal="start" slot="fixed">
-  <ion-fab-button>
-    <ion-icon name="add"></ion-icon>
-  </ion-fab-button>
-</ion-fab>
-
-
-
-  <div id="container">
-    <ion-button color="medium" id="menu-button">
-      Click Me
-    </ion-button>
-  </div>
-
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Welcome to Beyond Words!</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-menu-toggle>
+      <ion-fab>
+        <ion-fab-button color="danger">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-menu-toggle>
+  </ion-content>
+</div>
