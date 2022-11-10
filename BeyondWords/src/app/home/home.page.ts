@@ -42,9 +42,11 @@ private isDisplayThermo: boolean = false;
 
  
   dragPosition = {x:0, y:0};
-  changePosition() {
-this.dragPosition = {x: this.dragPosition.x, y: this.dragPosition.y}
-  };
+delete() {
+  window.location.reload();
+
+ 
+}
 
   constructor() {}
 
