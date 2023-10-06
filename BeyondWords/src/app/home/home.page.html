@@ -1,55 +1,55 @@
-
-
-<ion-menu [type]="menuType" content-id="main-content">
+<ion-menu [type]="menuType" contentId="main-content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Graphics</ion-title>
+      <ion-title>Image Gallery</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
-    
-      <button ion-button (click)="displayPill()"> <img src="assets/Images/pill.png"></button>
+  <ion-content class="ion-padding">
+    <p>
+      To add an image, click on it. It will then be in the workspace.
+    </p>
+
+    <button ion-button (click)="displayPill()"> <img src="assets/Images/pill.png"></button>
   
-      <button ion-button (click)="displayX()"> <img src="assets/Images/nobueno.png"></button>
+    <button ion-button (click)="displayX()"> <img src="assets/Images/nobueno.png"></button>
   
-      <button ion-button (click)="displayCheck()"> <img src="assets/Images/check.png"></button>
+    <button ion-button (click)="displayCheck()"> <img src="assets/Images/check.png"></button>
 
-      <button ion-button (click)="displayBackPain()"> <img src="assets/Images/BackPain.png"></button>
+    <button ion-button (click)="displayBackPain()"> <img src="assets/Images/BackPain.png"></button>
 
-      <button ion-button (click)="displayBreathe()"> <img src="assets/Images/Breathe.png"></button>
+    <button ion-button (click)="displayBreathe()"> <img src="assets/Images/Breathe.png"></button>
 
-      <button ion-button (click)="displayStummy()"> <img src="assets/Images/stummy.png"></button>
+    <button ion-button (click)="displayStummy()"> <img src="assets/Images/stummy.png"></button>
 
-      <button ion-button (click)="displayThermo()"> <img src="assets/Images/thermo.png"></button>
-  
-
-    
-
-     
-  
+    <button ion-button (click)="displayThermo()"> <img src="assets/Images/thermo.png"></button>
+    <ion-menu-toggle>
+      <ion-button color="danger">Click to close the Gallery</ion-button>
+    </ion-menu-toggle>
   </ion-content>
 </ion-menu>
 
 <div class="ion-page" id="main-content">
-  
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Welcome to Beyond Words!</ion-title>
+    </ion-toolbar>
+  </ion-header>
   <ion-content class="ion-padding">
-   
-     
-      
-   
     <ion-menu-toggle>
-      <ion-button>Click to open the menu</ion-button>
-  
+      <ion-fab>
+        <ion-fab-button color="danger">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
     </ion-menu-toggle>
     <div>
       <button (click)="delete()" ><ion-icon size="large" name="refresh-outline"></ion-icon></button>
-    
     </div>
-  
   </ion-content>
-</div> 
+</div>
+
 <div>
- <div *ngIf="isDisplayPill" class="example-box" cdkDrag [cdkDragFreeDragPosition]="dragPosition"> <img src="assets/Images/pill.png"></div>
+  <div *ngIf="isDisplayPill" class="example-box" cdkDrag [cdkDragFreeDragPosition]="dragPosition"> <img src="assets/Images/pill.png"></div>
 
   <div *ngIf="isDisplayX" class="example-box" cdkDrag [cdkDragFreeDragPosition]="dragPosition"> <img src="assets/Images/nobueno.png"/></div>
   
@@ -62,7 +62,4 @@
   <div *ngIf="isDisplayStummy" class="example-box" cdkDrag [cdkDragFreeDragPosition]="dragPosition"> <img src="assets/Images/stummy.png"/></div>
 
   <div *ngIf="isDisplayThermo" class="example-box" cdkDrag [cdkDragFreeDragPosition]="dragPosition"> <img src="assets/Images/thermo.png"/></div>
-  
- 
 </div>
-
